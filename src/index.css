@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+/* 深色主题与设计令牌（见 AGENTS.md） */
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #ffffff;
+  --color-accent-from: #6366f1;
+  --color-accent-to: #a855f7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+  }
+}
