@@ -1,13 +1,14 @@
 # 个人作品集网站开发指令
 
 ## 项目概述
-使用 React + TypeScript + Tailwind CSS 开发的个人作品集网站。
+使用 Vue 3 + TypeScript + Tailwind CSS 做前台作品集，使用 Node.js 做接口与管理员后台。
 
 ## 开发规范
-- 使用函数式组件 + Hooks
+- 使用 Vue 3 组合式 API（`<script setup lang="ts">`）
 - 使用 Tailwind CSS 编写样式
 - 组件要可复用
 - 代码要有注释
+- 管理员路由不出现在公开导航里，接口必须鉴权
 
 ## 设计要求
 - 深色主题（背景 #0a0a0a，文字 #ffffff）

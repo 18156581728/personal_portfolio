@@ -1,31 +1,16 @@
 {
-  "name": "firstpro",
+  "name": "personal-portfolio",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "description": "Interview-focused personal portfolio with a Vue frontend and Node API.",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "pnpm --parallel --filter @portfolio/web --filter @portfolio/api dev",
+    "build": "pnpm --filter @portfolio/web build && pnpm --filter @portfolio/api build",
+    "typecheck": "pnpm --filter @portfolio/web typecheck && pnpm --filter @portfolio/api typecheck",
+    "start": "pnpm --filter @portfolio/api start"
   },
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+  "engines": {
+    "node": ">=22.13"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@tailwindcss/vite": "^4.1.8",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react": "^4.4.1",
-    "eslint": "^9.25.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "tailwindcss": "^4.1.8",
-    "typescript": "~5.8.3",
-    "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
-  }
+  "packageManager": "pnpm@11.25.0"
 }

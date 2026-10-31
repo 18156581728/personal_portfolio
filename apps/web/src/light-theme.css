@@ -1,0 +1,728 @@
+/*
+ * 浅色主题覆盖层。
+ * 保留原有组件结构和深色主题样式，仅替换颜色、阴影与表面层级。
+ */
+:root {
+  color-scheme: light;
+  color: #20232b;
+  background: #f3f1eb;
+  --background: #f3f1eb;
+  --surface: #ffffff;
+  --surface-hover: #faf9f6;
+  --border: rgba(31, 35, 43, 0.13);
+  --muted: #5c606a;
+  --faint: #777b84;
+  --accent-from: #5b5bd6;
+  --accent-to: #8b5cf6;
+  --signal: #0f8a75;
+  --warm: #9a6400;
+  --panel: #ffffff;
+  --text-secondary: #555a64;
+  --text-tertiary: #747984;
+}
+
+html,
+body {
+  background: var(--background);
+  color: #20232b;
+}
+
+body {
+  background:
+    radial-gradient(circle at 78% 4%, rgba(116, 119, 255, 0.13), transparent 30rem),
+    radial-gradient(circle at 8% 48%, rgba(193, 133, 255, 0.1), transparent 28rem),
+    linear-gradient(180deg, #f8f7f3 0%, var(--background) 44rem);
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.2);
+  color: #24213a;
+}
+
+:focus-visible {
+  outline-color: #6366d9;
+}
+
+.skip-link {
+  background: #20232b;
+  color: #ffffff;
+}
+
+.portfolio-page::before {
+  background-image:
+    linear-gradient(rgba(35, 40, 52, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 40, 52, 0.045) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black, transparent 65%);
+}
+
+.ambient--one {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.14), transparent 68%);
+}
+
+.ambient--two {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1), transparent 68%);
+}
+
+.ambient--three {
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.09), transparent 70%);
+}
+
+.brand-mark {
+  color: #343741;
+}
+
+.eyebrow {
+  color: #737780;
+}
+
+.eyebrow__dot {
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+}
+
+.eyebrow__line {
+  background: linear-gradient(90deg, rgba(91, 91, 214, 0.7), transparent);
+}
+
+.hero-name {
+  background: linear-gradient(115deg, #1e2028 18%, #46437c 62%, #7763b5);
+  background-clip: text;
+}
+
+.hero-role {
+  color: #32353e;
+}
+
+.hero-headline {
+  color: #5a5e68;
+}
+
+.status-pill,
+.tech-pill {
+  border-color: rgba(31, 35, 43, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  color: #535761;
+  box-shadow: 0 1px 2px rgba(30, 33, 40, 0.035);
+}
+
+.status-pill--location {
+  border-color: rgba(15, 138, 117, 0.2);
+  background: #edf9f5;
+  color: #087765;
+}
+
+.tech-pill {
+  color: #5b606a;
+}
+
+.button--primary {
+  background: linear-gradient(120deg, #5961db, #8060e8);
+  box-shadow:
+    0 10px 24px -14px rgba(91, 91, 214, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+}
+
+.button--outline {
+  border-color: rgba(31, 35, 43, 0.15);
+  background: rgba(255, 255, 255, 0.72);
+  color: #464a54;
+  box-shadow: 0 1px 2px rgba(30, 33, 40, 0.035);
+}
+
+.button--outline:hover {
+  border-color: rgba(99, 102, 241, 0.34);
+  background: #ffffff;
+  color: #303586;
+}
+
+.icon-link,
+.menu-button {
+  border-color: rgba(31, 35, 43, 0.14);
+  background: rgba(255, 255, 255, 0.76);
+  color: #565b66;
+  box-shadow: 0 1px 2px rgba(30, 33, 40, 0.035);
+}
+
+.icon-link:hover,
+.menu-button:hover {
+  border-color: rgba(99, 102, 241, 0.34);
+  background: #ffffff;
+  color: #4b4fba;
+}
+
+.text-link {
+  color: #5556c9;
+  text-decoration-color: rgba(85, 86, 201, 0.3);
+}
+
+.text-link:hover {
+  color: #2f318c;
+  text-decoration-color: #2f318c;
+}
+
+.desktop-nav__item {
+  color: #747983;
+}
+
+.desktop-nav__index {
+  color: #9a9da5;
+}
+
+.desktop-nav__line {
+  background: rgba(31, 35, 43, 0.2);
+}
+
+.desktop-nav__item:hover,
+.desktop-nav__item--active {
+  color: #20232b;
+}
+
+.desktop-nav__item--active .desktop-nav__index {
+  color: #5b5bd6;
+}
+
+.sidebar-resume {
+  border-color: rgba(31, 35, 43, 0.24);
+  color: #666a73;
+}
+
+.sidebar-resume:hover {
+  border-color: #5b5bd6;
+  color: #2e3084;
+}
+
+.mobile-header {
+  border-bottom-color: rgba(31, 35, 43, 0.1);
+  background: rgba(247, 246, 242, 0.86);
+}
+
+.compact-resume {
+  background: #20232b;
+  color: #ffffff;
+}
+
+.mobile-menu {
+  background:
+    radial-gradient(circle at 88% 2%, rgba(109, 112, 240, 0.16), transparent 21rem),
+    #f6f5f1;
+  color: #20232b;
+}
+
+.mobile-menu__glow {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.16), transparent 68%);
+}
+
+.mobile-menu__link {
+  border-bottom-color: rgba(31, 35, 43, 0.11);
+  color: #777b84;
+}
+
+.mobile-menu__link strong {
+  color: #23262e;
+}
+
+.content-section,
+#projects.content-section {
+  border-top-color: rgba(31, 35, 43, 0.11);
+}
+
+#projects.content-section {
+  border-top-color: transparent;
+}
+
+#projects.content-section::before {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.09), transparent 68%);
+}
+
+.section-heading h2 {
+  color: #20232b;
+}
+
+.section-intro {
+  color: #646973;
+}
+
+.project-overview {
+  border-color: rgba(31, 35, 43, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: #777b84;
+  box-shadow: 0 1px 2px rgba(30, 33, 40, 0.035);
+}
+
+.project-overview strong {
+  color: #2b2e36;
+}
+
+.project-overview__signal {
+  background: #0f9f86;
+  box-shadow: 0 0 10px rgba(15, 159, 134, 0.35);
+}
+
+.project-overview i {
+  background: rgba(31, 35, 43, 0.12);
+}
+
+.about-copy p,
+.experience-item__summary {
+  color: #555a64;
+}
+
+.now-card {
+  border-color: rgba(15, 138, 117, 0.16);
+  background:
+    radial-gradient(circle at 90% 110%, rgba(15, 138, 117, 0.09), transparent 50%),
+    #ffffff;
+  box-shadow: 0 16px 46px -32px rgba(27, 31, 40, 0.3);
+}
+
+.now-card__grid {
+  border-color: rgba(91, 91, 214, 0.12);
+  box-shadow:
+    0 0 0 1.6rem rgba(99, 102, 241, 0.025),
+    0 0 0 3.2rem rgba(168, 85, 247, 0.015);
+}
+
+.skill-card {
+  border-color: rgba(31, 35, 43, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 28px -24px rgba(27, 31, 40, 0.24);
+}
+
+.skill-card:hover {
+  border-color: rgba(99, 102, 241, 0.26);
+  background: #ffffff;
+  box-shadow: 0 18px 36px -26px rgba(27, 31, 40, 0.3);
+}
+
+.skill-card h3 {
+  color: #363a43;
+}
+
+.skill-card__number {
+  color: #a0a3aa;
+}
+
+.experience-list {
+  border-top-color: rgba(31, 35, 43, 0.11);
+}
+
+.experience-item {
+  border-bottom-color: rgba(31, 35, 43, 0.11);
+}
+
+a.experience-item:hover {
+  border-color: rgba(99, 102, 241, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.experience-item__date {
+  color: #777b84;
+}
+
+.experience-item h3 {
+  color: #292c34;
+}
+
+.experience-item__company {
+  color: #5e5fc8;
+}
+
+.project-card {
+  border-color: rgba(31, 35, 43, 0.11);
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.22)),
+    #ffffff;
+  box-shadow: 0 14px 40px -34px rgba(27, 31, 40, 0.32);
+}
+
+.project-card[data-accent="agent"] {
+  --card-accent: 13, 148, 136;
+}
+
+.project-card[data-accent="backend"] {
+  --card-accent: 79, 70, 229;
+}
+
+.project-card[data-accent="frontend"] {
+  --card-accent: 190, 52, 118;
+}
+
+.project-card[data-accent="fullstack"] {
+  --card-accent: 126, 62, 220;
+}
+
+.project-card:hover {
+  border-color: rgba(var(--card-accent), 0.3);
+  background: #ffffff;
+  box-shadow:
+    0 28px 54px -38px rgba(var(--card-accent), 0.35),
+    0 0 0 1px rgba(var(--card-accent), 0.03);
+}
+
+.project-card--featured {
+  border-color: rgba(var(--card-accent), 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 14px 40px -34px rgba(27, 31, 40, 0.32);
+}
+
+.project-card__cover {
+  border-color: rgba(31, 35, 43, 0.08);
+  background: #eef0f2;
+}
+
+.project-cover-fallback {
+  background:
+    linear-gradient(145deg, rgba(var(--card-accent), 0.17), transparent 56%),
+    radial-gradient(circle at 78% 20%, rgba(var(--card-accent), 0.18), transparent 38%),
+    #eef0f3;
+}
+
+.project-cover-fallback strong {
+  color: rgba(32, 35, 43, 0.82);
+}
+
+.project-cover-fallback small {
+  color: rgba(var(--card-accent), 0.86);
+}
+
+.project-cover-fallback__orb {
+  border-color: rgba(var(--card-accent), 0.22);
+  box-shadow:
+    0 0 0 1.3rem rgba(var(--card-accent), 0.055),
+    0 0 0 2.6rem rgba(var(--card-accent), 0.025);
+}
+
+.project-cover-fallback__grid {
+  background-image:
+    linear-gradient(rgba(31, 35, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 35, 43, 0.045) 1px, transparent 1px);
+}
+
+.featured-badge {
+  border-color: rgba(154, 100, 0, 0.18);
+  background: rgba(255, 250, 235, 0.92);
+  color: #865900;
+  box-shadow: 0 4px 14px -10px rgba(65, 49, 16, 0.3);
+}
+
+.featured-badge::before {
+  background: #d69518;
+  box-shadow: 0 0 8px rgba(214, 149, 24, 0.35);
+}
+
+.project-open-mark {
+  border-color: rgba(31, 35, 43, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  color: #363a43;
+  box-shadow: 0 4px 16px -10px rgba(27, 31, 40, 0.35);
+}
+
+.project-card:hover .project-open-mark,
+.project-card:focus-visible .project-open-mark {
+  background: rgb(var(--card-accent));
+  color: #ffffff;
+}
+
+.project-card__body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.48), transparent 50%);
+}
+
+.project-card__body h3 {
+  color: #262931;
+}
+
+.project-card__problem {
+  color: rgb(var(--card-accent));
+}
+
+.project-card__description {
+  color: #5b606a;
+}
+
+.project-tag {
+  border-color: rgba(31, 35, 43, 0.11);
+  background: rgba(255, 255, 255, 0.66);
+  color: #62666f;
+}
+
+.project-tag--agent {
+  border-color: rgba(15, 138, 117, 0.17);
+  background: #edf9f5;
+  color: #087765;
+}
+
+.project-details {
+  border-color: rgba(31, 35, 43, 0.1);
+}
+
+.project-details dt {
+  color: #898d95;
+}
+
+.project-details dd {
+  color: #555a64;
+}
+
+.project-link {
+  color: #515660;
+}
+
+.project-link:hover {
+  color: #4b4cc2;
+}
+
+.project-open-hint {
+  color: rgb(var(--card-accent));
+}
+
+.internal-badge {
+  color: #858992;
+}
+
+.project-loading,
+.empty-state {
+  border-color: rgba(31, 35, 43, 0.16);
+  color: #6b707a;
+}
+
+.contact-panel {
+  border-color: rgba(91, 91, 214, 0.13);
+  background:
+    linear-gradient(145deg, rgba(99, 102, 241, 0.1), transparent 58%),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 16px 44px -34px rgba(53, 54, 109, 0.28);
+}
+
+.contact-panel__aurora {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.13), transparent 68%);
+}
+
+.contact-panel p {
+  color: #555a64;
+}
+
+.site-footer {
+  border-top-color: rgba(31, 35, 43, 0.11);
+  color: #7b7f88;
+}
+
+.site-footer a:hover {
+  color: #252830;
+}
+
+/* Admin */
+.admin-shell {
+  background:
+    radial-gradient(circle at 85% 0%, rgba(116, 119, 255, 0.12), transparent 30rem),
+    #f3f1eb;
+  color: #20232b;
+}
+
+.admin-header {
+  border-bottom-color: rgba(31, 35, 43, 0.1);
+  background: rgba(247, 246, 242, 0.9);
+}
+
+.admin-brand {
+  color: #343741;
+}
+
+.admin-header__link {
+  color: #666a73;
+}
+
+.admin-header__link:hover {
+  background: rgba(31, 35, 43, 0.06);
+  color: #20232b;
+}
+
+.admin-title-row h1,
+.admin-form-top h1 {
+  color: #20232b;
+}
+
+.admin-state {
+  border-color: rgba(31, 35, 43, 0.16);
+  color: #666a73;
+}
+
+.admin-table-wrap {
+  border-color: rgba(31, 35, 43, 0.11);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 38px -32px rgba(27, 31, 40, 0.24);
+}
+
+.admin-table th {
+  border-bottom-color: rgba(31, 35, 43, 0.1);
+  color: #848891;
+}
+
+.admin-table td {
+  border-bottom-color: rgba(31, 35, 43, 0.08);
+  color: #5b606a;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.035);
+}
+
+.admin-mini-tag {
+  border-color: rgba(31, 35, 43, 0.11);
+  color: #6b6f78;
+}
+
+.admin-edit-link {
+  color: #5556c9;
+}
+
+.admin-edit-link:hover {
+  color: #2f318c;
+}
+
+.admin-login-page {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(116, 119, 255, 0.15), transparent 34rem),
+    #f3f1eb;
+}
+
+.admin-login-page__grid {
+  background-image:
+    linear-gradient(rgba(31, 35, 43, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 35, 43, 0.045) 1px, transparent 1px);
+}
+
+.admin-login-card {
+  border-color: rgba(31, 35, 43, 0.11);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 28px 70px -40px rgba(36, 39, 52, 0.35);
+}
+
+.admin-lock {
+  border-color: rgba(91, 91, 214, 0.2);
+  background: #f0efff;
+  color: #5454c5;
+}
+
+.admin-back-link {
+  color: #6c7079;
+}
+
+.admin-back-link:hover {
+  color: #20232b;
+}
+
+.form-section {
+  border-color: rgba(31, 35, 43, 0.1);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 10px 28px -26px rgba(27, 31, 40, 0.22);
+}
+
+.form-section__intro h2 {
+  color: #31343d;
+}
+
+.form-section__intro p,
+.form-field small {
+  color: #777b84;
+}
+
+.form-label,
+.toggle-row {
+  color: #555a64;
+}
+
+.form-input,
+.form-textarea {
+  border-color: rgba(31, 35, 43, 0.13);
+  background: #faf9f6;
+  color: #252830;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9a9da5;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgba(91, 91, 214, 0.5);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.choice-pill {
+  border-color: rgba(31, 35, 43, 0.12);
+  background: rgba(255, 255, 255, 0.66);
+  color: #656a73;
+}
+
+.choice-pill--active {
+  border-color: rgba(91, 91, 214, 0.28);
+  background: #efefff;
+  color: #4849af;
+}
+
+.toggle-control {
+  border-color: rgba(31, 35, 43, 0.16);
+  background: #dedfdf;
+}
+
+.toggle-control::after {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(25, 27, 34, 0.24);
+}
+
+/* Tailwind 工具类补充：模板中的白色文字在浅色主题下需要转为深灰。 */
+[class~="text-white"] {
+  color: #252830 !important;
+}
+
+[class~="text-white/90"],
+[class~="text-white/80"],
+[class~="text-white/76"],
+[class~="text-white/70"] {
+  color: #3e424c !important;
+}
+
+[class~="text-white/65"],
+[class~="text-white/60"],
+[class~="text-white/55"],
+[class~="text-white/50"] {
+  color: #5d626c !important;
+}
+
+[class~="text-white/45"],
+[class~="text-white/42"],
+[class~="text-white/40"],
+[class~="text-white/38"],
+[class~="text-white/35"],
+[class~="text-white/34"],
+[class~="text-white/30"],
+[class~="text-white/28"] {
+  color: #7c8089 !important;
+}
+
+[class~="text-white/24"],
+[class~="text-white/23"],
+[class~="text-white/20"],
+[class~="text-white/18"] {
+  color: #9699a1 !important;
+}
+
+[class~="bg-white/15"] {
+  background: rgba(31, 35, 43, 0.15) !important;
+}
+
+[class~="hover:text-white"]:hover {
+  color: #20232b !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card:hover,
+  .skill-card:hover,
+  .button:hover,
+  .icon-link:hover {
+    transform: none;
+  }
+}
